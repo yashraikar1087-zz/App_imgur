@@ -1,0 +1,65 @@
+Meteor and react work together.React is the library
+
+Meteor ->just a place to keep javacript files. React is a third party library to meteor. Meteors also gives a web server.
+
+To create project in meteor command=  "meteor create images"
+
+To run server command="meteor"
+
+"Npm registry" contains libraries we need
+
+to install any dependency(now react) "meteor npm install --save react"
+
+React is used to produce html and handle user events.
+
+"client" folder is special in meteor , any code you want to execute is added in this folder. Any files put in this folder will run automatically
+
+"main.html" file is automatically loaded by meteor when site is opened
+
+A "component" is a single function or object which produces some html and shows it on screen
+
+jsx is the code written in a component (html like code)
+
+ReactDom is a library which works with the web browser "meteor npm install --save react-dom"
+
+Whenver you want to reference javascript variable inside of jsx you do using curly braces
+
+Passing some amount of data from parent component to chil component is known as props(property)
+
+think of component as a class , you need to create a instance of it (object) to use in a function
+
+ReactDOM.render is a method of the react-dom library-> has two arguments, first argument is a component to render(wrap the component with tags ), second argument is where you want to render the component to inside the DOm(use a native query selector which searches for the component through the DOm "document.querySelector(".container")")
+
+Always wait for the dom to load before you add component to your project(Meteor.startup())
+
+
+1)Three steps while  making component
+
+- Import react
+-Create our component(create function and return jsx)
+-export our component (export default ImageList)
+
+for our own files always provide the proper path while importing the component
+
+Always import other components in your main component(main.js in this project)
+ReactDOM.render is only used once for your root component. Other components are always imported in the main components
+
+to import twitter bootstrap to meteor use "meteor add twbs:bootstrap@3.3.6"
+
+in react we use "className" to add css classes instead of class
+
+in es6 if in function there is only one line to return , you and take off the return key word and also the parenthesis
+
+axios used to make ajax requests
+
+axios.get("url")  ---to make ajax request
+
+use classes to make your component fetch their own data
+
+componentWillMount() is a method that gets called right before component will be loaded in your application
+
+state is a property every component has. It is a javascript object that we can make changes to, and once any change is done to it ,the component will automatically re-render
+
+
+this.setState is the only way we change our state over time. Only modify state object directly when you initialize it
+
